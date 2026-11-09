@@ -1,0 +1,6 @@
+# промежуточные файлы сборки
+build/
+work/
+*.tmp
+.DS_Store
+__pycache__/

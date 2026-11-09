@@ -1,0 +1,327 @@
+/* ================= BIKAI catalog — RU edition ================= */
+@font-face { font-family: 'Mont'; src: url('assets/fonts/Montserrat-400.ttf'); font-weight: 400; }
+@font-face { font-family: 'Mont'; src: url('assets/fonts/Montserrat-500.ttf'); font-weight: 500; }
+@font-face { font-family: 'Mont'; src: url('assets/fonts/Montserrat-600.ttf'); font-weight: 600; }
+@font-face { font-family: 'Mont'; src: url('assets/fonts/Montserrat-700.ttf'); font-weight: 700; }
+@font-face { font-family: 'Mont'; src: url('assets/fonts/Montserrat-800.ttf'); font-weight: 800; }
+@font-face { font-family: 'Int'; src: url('assets/fonts/Inter-400.ttf'); font-weight: 400; }
+@font-face { font-family: 'Int'; src: url('assets/fonts/Inter-500.ttf'); font-weight: 500; }
+@font-face { font-family: 'Int'; src: url('assets/fonts/Inter-600.ttf'); font-weight: 600; }
+@font-face { font-family: 'Int'; src: url('assets/fonts/Inter-700.ttf'); font-weight: 700; }
+
+:root {}
+
+html {
+  font-family: 'Int', sans-serif;
+  color: #2f3a45;
+  font-size: 9pt;
+}
+
+@page {
+  size: 216mm 291mm;
+  margin: 24mm 18mm 16mm 18mm;
+
+  @top-left {
+    content: string(kicker);
+    font-family: 'Mont'; font-weight: 600; font-size: 7.1pt;
+    letter-spacing: 0.11em; text-transform: uppercase; color: #2b3440;
+    vertical-align: bottom; padding-bottom: 4mm;
+  }
+  @bottom-left {
+    content: 'BIKAI  /  PRODUCT PORTFOLIO';
+    font-family: 'Mont'; font-weight: 600; font-size: 6.9pt;
+    letter-spacing: 0.06em; color: #2b3440;
+    vertical-align: top; padding-top: 5mm;
+  }
+  @bottom-right {
+    content: counter(page, decimal-leading-zero);
+    font-family: 'Mont'; font-weight: 800; font-size: 10.5pt; color: #132a3a;
+    vertical-align: top; padding-top: 3.6mm;
+  }
+}
+
+@page cover {
+  margin: 0;
+  @top-left { content: none; } @bottom-left { content: none; } @bottom-right { content: none; }
+}
+
+@page tocpage {
+  margin: 0;
+  @top-left { content: none; } @bottom-left { content: none; } @bottom-right { content: none; }
+}
+
+/* ------------------------------------------------ обложка */
+section.cover {
+  page: cover;
+  position: relative;
+  width: 216mm; height: 291mm;
+  background: #fff;
+  page-break-after: always;
+  overflow: hidden;
+}
+section.cover .logo { position: absolute; left: 19.4mm; top: 66mm; width: 64.7mm; }
+section.cover .tag {
+  position: absolute; left: 20.4mm; top: 84.2mm;
+  font-family: 'Mont'; font-weight: 500; font-size: 8.4pt; color: #132a3a;
+}
+section.cover .ptitle {
+  position: absolute; left: 19.2mm; top: 94.5mm;
+  font-family: 'Mont'; font-weight: 700; font-size: 17.5pt; color: #ad84c6;
+  letter-spacing: 0.005em;
+}
+section.cover .prule {
+  position: absolute; left: 19.4mm; top: 107.8mm;
+  width: 18.5mm; height: 1mm; background: #ad84c6;
+}
+section.cover .ptag {
+  position: absolute; left: 19.4mm; top: 111.4mm;
+  font-family: 'Mont'; font-weight: 600; font-size: 10.4pt; line-height: 1.9; color: #132a3a;
+  letter-spacing: 0.02em;
+}
+section.cover .band {
+  position: absolute; left: 0; top: 210mm; width: 216mm; height: 81mm;
+  background: #7a95dc;
+}
+section.cover .hero {
+  position: absolute; left: 18.9mm; top: 155.2mm; width: 178.2mm; height: 118.8mm;
+  object-fit: cover;
+}
+
+/* ------------------------------------------------ оглавление */
+section.tocpage {
+  page: tocpage;
+  width: 216mm; height: 291mm;
+  page-break-after: always;
+  overflow: hidden;
+  background: #fff;
+  padding-top: 21mm;
+}
+section.tocpage .tochead { margin-left: 18mm; width: 180mm; }
+section.tocpage .toctitle {
+  font-family: 'Mont'; font-weight: 800; font-size: 27pt; color: #132a3a;
+  margin: 0 0 2.5mm 0; letter-spacing: -0.01em;
+}
+section.tocpage .tocsub {
+  font-family: 'Mont'; font-weight: 500; font-size: 8.6pt; color: #52616c; margin: 0;
+}
+section.tocpage .tocband {
+  position: relative;
+  margin-top: 13mm; width: 216mm; height: 231mm;
+  background: linear-gradient(115deg, #93a7e8 0%, #b9c6ee 38%, #eef2fb 78%, #ffffff 100%);
+}
+section.vlabel, section.tocpage .vlabel {
+  position: absolute; left: 15mm; top: 188mm;
+  transform: rotate(-90deg); transform-origin: left top;
+  font-family: 'Mont'; font-weight: 500; font-size: 25pt; letter-spacing: 0.18em;
+  color: #ffffff; opacity: 0.6; white-space: nowrap;
+}
+section.tocpage .pills { margin: 18mm 0 0 42mm; width: 156mm; }
+a.pill {
+  position: relative;
+  display: block;
+  height: 15.2mm; margin-bottom: 4.7mm;
+  border: 0.35mm solid #a5c1cf; border-radius: 9mm;
+  background: linear-gradient(100deg, #cfd9f2 0%, #93a7e8 45%, #7f93d6 100%);
+  text-decoration: none;
+}
+a.pill .pn {
+  position: absolute; left: 1.7mm; top: 1.3mm;
+  width: 12.6mm; height: 12.6mm; border-radius: 50%; background: #f4f1fa;
+  text-align: center; line-height: 12.6mm;
+  font-family: 'Mont'; font-weight: 700; font-size: 9.6pt; color: #ad84c6;
+}
+a.pill .ptxt { position: absolute; left: 18.4mm; top: 3.1mm; right: 14mm; }
+a.pill .ptxt b {
+  display: block; font-family: 'Mont'; font-weight: 700; font-size: 11pt; color: #ffffff;
+  line-height: 1.15;
+}
+a.pill .ptxt i {
+  display: block; font-style: normal; font-family: 'Mont'; font-weight: 500; font-size: 7.1pt;
+  color: #f1f4fd; margin-top: 0.9mm; line-height: 1.25;
+}
+a.pill::after {
+  content: target-counter(attr(href), page, decimal-leading-zero);
+  position: absolute; right: 5mm; top: 5.4mm;
+  font-family: 'Mont'; font-weight: 700; font-size: 9.6pt; color: #132a3a;
+}
+
+/* ------------------------------------------------ страницы продукта */
+section.product { page-break-before: always; }
+
+.kick {
+  string-set: kicker content();
+  height: 0; margin: 0; padding: 0;
+  font-size: 0.1pt; line-height: 0; color: transparent;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Mont'; font-weight: 800; font-size: 25pt; line-height: 1.1;
+  color: #132a3a; margin: 0 0 2.6mm 0; letter-spacing: -0.005em;
+}
+h1.long { font-size: 19.5pt; line-height: 1.15; }
+
+p.lead {
+  font-family: 'Mont'; font-weight: 600; font-size: 10.2pt; color: #132a3a;
+  margin: 0 0 4.5mm 0; line-height: 1.4;
+}
+p.tagline {
+  font-family: 'Mont'; font-weight: 700; font-size: 12pt; color: #ad84c6;
+  margin: 0 0 4mm 0;
+}
+p.big { font-size: 9.6pt; line-height: 1.55; margin: 0 0 2.6mm 0; }
+
+p { font-size: 8.7pt; line-height: 1.48; margin: 0 0 2.1mm 0; }
+p.noteref {
+  font-family: 'Mont'; font-weight: 500; font-size: 7.2pt; color: #8fa3b5;
+  margin: -1mm 0 3mm 0;
+}
+
+h3 {
+  font-family: 'Mont'; font-weight: 700; font-size: 9.7pt; color: #8f74b8;
+  margin: 4.1mm 0 1.6mm 0; line-height: 1.25;
+  page-break-after: avoid;
+}
+
+ul { margin: 0 0 2.6mm 0; padding: 0; list-style: none; }
+ul li {
+  position: relative; padding-left: 4.2mm; margin-bottom: 0.9mm;
+  font-size: 8.6pt; line-height: 1.42;
+}
+ul li::before {
+  content: ''; position: absolute; left: 0.6mm; top: 1.35mm;
+  width: 1.5mm; height: 1.5mm; background: #ad84c6;
+}
+
+/* ------------------------------------------------ рисунки */
+figure.figcard {
+  margin: 2.5mm 0 4mm 0;
+  padding: 4.5mm;
+  background: linear-gradient(160deg, #fbfdff 0%, #e9f2fa 100%);
+  border-radius: 3.5mm;
+  text-align: center;
+  page-break-inside: avoid;
+}
+figure.figcard img { max-width: 100%; }
+figure.figcard.portrait img { max-height: 64mm; }
+figure.figcard.landscape img { max-height: 47mm; }
+figure.figcard.big img { max-height: 118mm; }
+figure.figcard figcaption {
+  font-family: 'Int'; font-size: 7.1pt; line-height: 1.35; color: #52616c;
+  margin-top: 2.6mm; text-align: left;
+}
+figure.figcard figcaption b { color: #132a3a; font-weight: 600; }
+
+/* ------------------------------------------------ таблицы */
+table.spec {
+  width: 100%; border-collapse: collapse;
+  font-family: 'Int'; font-size: 7.25pt;
+  margin: 1.6mm 0 4.5mm 0;
+}
+table.spec thead { display: table-header-group; }
+table.spec th {
+  background: #eaf3fa; color: #132a3a;
+  font-weight: 600; font-size: 7.2pt; text-align: left;
+  padding: 1.7mm 2mm; border-bottom: 0.4mm solid #cfdde9;
+  line-height: 1.25;
+}
+table.spec td {
+  padding: 1.45mm 2mm; border-bottom: 0.22mm solid #e3ebf2;
+  vertical-align: top; line-height: 1.32;
+}
+table.spec tbody tr:nth-child(even) td { background: #f7fafd; }
+table.spec td:first-child { color: #132a3a; font-weight: 500; }
+table.spec.wide { font-size: 6.9pt; }
+table.spec.gloss td { font-size: 7.2pt; }
+table.spec.gloss { page-break-inside: avoid; }
+table.spec.keep { page-break-inside: avoid; }
+table.spec.long { page-break-inside: auto; }
+table.spec tr { page-break-inside: avoid; }
+
+/* ------------------------------------------------ KPI-карточки интро */
+.kpis { display: flex; margin: 6mm 0 0 0; }
+.kpi {
+  flex: 1 1 0; margin-right: 3mm; padding: 3.6mm 3mm;
+  background: #eaf3fa; border-radius: 2.5mm;
+}
+.kpi:last-child { margin-right: 0; }
+.kpi span { display: block; font-family: 'Mont'; font-weight: 600; font-size: 7.4pt; color: #52616c; }
+.kpi b { display: block; font-family: 'Mont'; font-weight: 800; font-size: 11pt; color: #132a3a; margin: 1.4mm 0 0.8mm; }
+.kpi i { display: block; font-style: normal; font-family: 'Int'; font-size: 7.2pt; color: #6997af; }
+
+/* ------------------------------------------------ приложения */
+ol.notes { margin: 0; padding-left: 5mm; }
+ol.notes li { font-size: 8.4pt; line-height: 1.45; margin-bottom: 2.6mm; }
+
+/* ------------------------------------------------ контакты */
+.contacts { display: flex; margin: 6mm 0 0 0; }
+.ccard {
+  flex: 1 1 0; margin-right: 3.4mm; padding: 4.4mm 4mm 4.8mm;
+  background: linear-gradient(160deg, #fbfdff 0%, #e9f2fa 100%);
+  border-radius: 3mm;
+}
+.ccard:last-child { margin-right: 0; }
+.ccard .ccap {
+  display: block; font-family: 'Mont'; font-weight: 600; font-size: 7pt;
+  letter-spacing: 0.08em; text-transform: uppercase; color: #ad84c6; margin-bottom: 2.2mm;
+}
+.ccard b {
+  display: block; font-family: 'Mont'; font-weight: 700; font-size: 9.6pt;
+  color: #132a3a; line-height: 1.3; margin-bottom: 2mm;
+}
+.ccard i {
+  display: block; font-style: normal; font-family: 'Int'; font-size: 7.8pt;
+  color: #52616c; line-height: 1.45;
+}
+.contact-note {
+  margin-top: 8mm; padding: 4.5mm 5mm; background: #eaf3fa; border-radius: 3mm;
+  font-size: 8.6pt; line-height: 1.5; color: #2f3a45;
+}
+.contact-note b { font-family: 'Mont'; color: #132a3a; }
+
+/* ------------------------------------------------ нижний блок интро */
+.intro-foot { display: flex; margin-top: 7mm; border-top: 0.3mm solid #dbe6ef; padding-top: 4.5mm; }
+.if-item { flex: 1 1 0; margin-right: 4mm; }
+.if-item b { display: block; font-family: 'Mont'; font-weight: 800; font-size: 13pt; color: #ad84c6; }
+.if-item i { display: block; font-style: normal; font-size: 7.6pt; color: #52616c; margin-top: 1mm; line-height: 1.4; }
+
+/* ------------------------------------------------ полосы изображений */
+.photo-band { margin: 8mm -18mm 0 -18mm; }
+.photo-band img { width: 216mm; display: block; }
+.trio { display: flex; margin-top: 8mm; }
+.trio .tcell {
+  flex: 1 1 0; margin-right: 3mm; padding: 3mm;
+  background: linear-gradient(160deg, #fbfdff 0%, #eaf2fa 100%);
+  border-radius: 3mm; text-align: center;
+}
+.trio .tcell:last-child { margin-right: 0; }
+.trio img { height: 62mm; max-width: 100%; object-fit: contain; }
+.trio span {
+  display: block; font-family: 'Mont'; font-weight: 600; font-size: 7.2pt;
+  color: #52616c; margin-top: 2mm;
+}
+
+/* ------------------------------------------------ авто-подгонка плотности */
+section.dense1 figure.figcard.portrait img { max-height: 50mm; }
+section.dense1 figure.figcard.landscape img { max-height: 38mm; }
+section.dense1 table.spec { font-size: 6.9pt; }
+section.dense1 table.spec td { padding: 1.1mm 1.8mm; }
+section.dense1 table.spec th { padding: 1.3mm 1.8mm; font-size: 6.9pt; }
+section.dense1 h3 { margin: 3.2mm 0 1.3mm 0; }
+section.dense1 p { margin-bottom: 1.7mm; }
+section.dense1 ul li { margin-bottom: 0.6mm; }
+section.dense1 figure.figcard { padding: 3.2mm; margin: 2mm 0 3mm 0; }
+
+section.dense2 figure.figcard.portrait img { max-height: 40mm; }
+section.dense2 figure.figcard.landscape img { max-height: 30mm; }
+section.dense2 table.spec { font-size: 6.5pt; }
+section.dense2 table.spec td { padding: 0.85mm 1.6mm; line-height: 1.25; }
+section.dense2 table.spec th { padding: 1.1mm 1.6mm; font-size: 6.6pt; }
+section.dense2 h3 { margin: 2.6mm 0 1.1mm 0; }
+section.dense2 p { margin-bottom: 1.4mm; font-size: 8.4pt; }
+section.dense2 ul li { margin-bottom: 0.4mm; font-size: 8.3pt; }
+section.dense2 figure.figcard { padding: 2.6mm; margin: 1.6mm 0 2.6mm 0; }
+section.dense2 figure.figcard figcaption { margin-top: 1.8mm; }
+
+.keepblock { page-break-inside: avoid; }
+.keepblock h3 { margin-top: 4.1mm; }
